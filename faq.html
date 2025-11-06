@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Často kladené otázky - Masáže Jan Šimek</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Vlastní barvy a styly z index.html pro konzistenci */
+        :root {
+            --barva-zelena: #4CAF50;
+            --barva-hneda: #795548;
+            --barva-modra: #2196F3;
+            --barva-pozadi: #f0f8f0;
+            --barva-bila: #fff;
+            --barva-text: #333;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--barva-pozadi);
+            color: var(--barva-text);
+            line-height: 1.6;
+        }
+        
+        h1, h2, h3 {
+            font-family: 'Merriweather', serif;
+            color: var(--barva-hneda);
+        }
+
+        .container {
+            max-width: 90%;
+            margin: 0 auto;
+            background-color: var(--barva-bila);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                max-width: 1024px;
+            }
+        }
+    
+        /* Styly pro sekce */
+        .section {
+            padding: 3rem 1.5rem;
+        }
+        
+        .section-intro {
+            background-color: #f7f7f7;
+            padding-bottom: 2rem;
+            text-align: center;
+        }
+
+        /* Styly pro FAQ (ponechány dle tvého přání) */
+        .faq-section {
+            text-align: left;
+        }
+        details {
+            background-color: #f0f0f0;
+            border-radius: 0.5rem;
+            margin-bottom: 1rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            transition: background-color 0.3s ease;
+        }
+        details[open] {
+            background-color: var(--barva-hneda);
+            color: var(--barva-bila);
+        }
+        summary {
+            font-weight: bold;
+            padding: 1.5rem;
+            cursor: pointer;
+            list-style: none;
+            position: relative;
+        }
+        summary::-webkit-details-marker {
+            display: none;
+        }
+        summary:after {
+            content: '+';
+            font-size: 1.5rem;
+            font-weight: bold;
+            position: absolute;
+            right: 1.5rem;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: transform 0.3s ease;
+        }
+        details[open] summary:after {
+            content: '−';
+            transform: translateY(-50%);
+        }
+        details[open] summary {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            color: var(--barva-bila);
+        }
+        .faq-content {
+            padding: 0 1.5rem 1.5rem;
+        }
+        details[open] .faq-content {
+            color: #f0f0f0;
+        }
+
+        /* Styly pro novou navigaci */
+        .main-nav { background-color: var(--barva-bila); padding: 1rem 1.5rem; box-shadow: 0 2px 5px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 50; }
+        .nav-container { display: flex; justify-content: space-between; align-items: center; max-width: 1024px; margin: 0 auto; }
+        .nav-logo { font-family: 'Merriweather', serif; font-size: 1.5rem; font-weight: bold; color: var(--barva-hneda); text-decoration: none; }
+        .nav-links { display: none; gap: 1.5rem; }
+        .nav-links a { text-decoration: none; color: var(--barva-text); font-weight: 500; transition: color 0.2s; }
+        .nav-links a:hover, .nav-links a.active { color: var(--barva-zelena); }
+        .hamburger-button { display: block; background: none; border: none; cursor: pointer; }
+        .hamburger-button svg { width: 2rem; height: 2rem; }
+        @media (min-width: 768px) { .nav-links { display: flex; } .hamburger-button { display: none; } }
+        .mobile-menu { display: none; background-color: var(--barva-bila); padding: 1rem 1.5rem 2rem; border-top: 1px solid #eee; }
+        .mobile-menu a { display: block; padding: 0.75rem 0; text-align: center; color: var(--barva-text); text-decoration: none; font-size: 1.125rem; }
+        .mobile-menu a:hover, .mobile-menu a.active { background-color: #f0f0f0; color: var(--barva-zelena); border-radius: 0.5rem; }
+    </style>
+</head>
+<body>
+
+<nav class="main-nav" aria-label="Hlavní navigace">
+    <div class="nav-container">
+        <a href="../index.html" class="nav-logo">Masáže Jan Šimek</a>
+        <div class="nav-links">
+            <a href="../index.html">Domů</a>
+            <a href="001._cenik.html">Ceník</a>
+            <a href="002._masaze.html">O masážích</a>
+            <a href="003._faq.html" class="active">FAQ</a>
+            <a href="004._blog.html">Blog</a>
+            <a href="005._o_me.html">O mně</a>
+        </div>
+        <button class="hamburger-button" aria-label="Otevřít menu" aria-expanded="false">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" /></svg>
+        </button>
+    </div>
+</nav>
+
+<div class="mobile-menu">
+    <a href="../index.html">Domů</a>
+    <a href="001._cenik.html">Ceník</a>
+    <a href="002._masaze.html">O masážích</a>
+    <a href="003._faq.html" class="active">FAQ</a>
+    <a href="004._blog.html">Blog</a>
+    <a href="005._o_me.html">O mně</a>
+</div>
+
+<script>
+    const hamburgerBtn = document.querySelector('.hamburger-button');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    hamburgerBtn.addEventListener('click', () => {
+        const isExpanded = hamburgerBtn.getAttribute('aria-expanded') === 'true';
+        hamburgerBtn.setAttribute('aria-expanded', !isExpanded);
+        mobileMenu.style.display = isExpanded ? 'none' : 'block';
+    });
+</script>
+
+    <div class="container" role="main">
+        <header class="section section-intro" role="banner">
+            <h1 class="text-4xl font-bold">Často kladené otázky (FAQ)</h1>
+            <p class="text-gray-600 mt-2 max-w-2xl mx-auto lead-text">
+                Na této stránce naleznete odpovědi na nejčastější otázky. Pokud zde nenajdete odpověď na svou otázku, napište mi. Rád ji sem doplním spolu s odpovědí.
+            </p>
+        </header>
+
+        <section class="section faq-section" role="region" aria-labelledby="faq-heading">
+            <h2 id="faq-heading" class="sr-only">Nejčastější dotazy</h2>
+            
+            <details>
+                <summary aria-label="Rozbalovací pole: Jak se mohu objednat na masáž?">Jak se mohu objednat na masáž?</summary>
+                <div class="faq-content">
+                    <p>
+                    Objednání je snadné a můžete si vybrat z několika způsobů:<br>
+                    1.	<strong>Telefonicky:</strong> Zavolejte mi na číslo 704 715 817.<br>
+                    2.	<strong>SMS nebo WhatsApp:</strong> Stačí mi napsat zprávu s vaším požadavkem.<br>
+                    3.	<strong>E-mailem:</strong> Napište mi na info@masazesimek.cz.<br>
+                    4.	<strong>Online rezervace:</strong> Klikněte na rezervační tlačítko na úvodní stránce mého webu. Budete přesměrováni do rezervačního systému Reservio, kde si snadno zarezervujete termín. 
+                    </p>
+                </div>
+            </details>
+
+            <details>
+                <summary aria-label="Rozbalovací pole: Jak probíhá masáž?">Jak probíhá masáž?</summary>
+                <div class="faq-content">
+                    <p>
+                    Po příchodu na adresu Tř. Václava Klementa 820, Mladá Boleslav, se posaďte v čekárně. Moje masérna se nachází v prostorách kadeřnictví, takže se nenechte zmást. Jakmile přijdu, společně přejdeme do masérny, kde vám vysvětlím vše potřebné a instruuji vás podle zvoleného typu masáže.
+                    </p>
+                </div>
+            </details>
+
+            <details>
+                <summary aria-label="Rozbalovací pole: Co si mám vzít do masérny?">Co si mám vzít do masérny?</summary>
+                <div class="faq-content">
+                    <p>
+                    Nemusíte si brát nic speciálního, moje masérna je plně vybavená. Stačí, když přijdete s dobrou náladou a chutí si odpočinout.
+                    </p>
+                </div>
+            </details>
+            
+            <details>
+                <summary aria-label="Rozbalovací pole: Jak mohu platit za masáž?">Jak mohu platit za masáž?</summary>
+                <div class="faq-content">
+                    <p>
+                    Platbu za masáž můžete provést těmito způsoby:<br>
+                    1.	<strong>Hotovost:</strong> Prosím, mějte připravenou hotovost, ideálně ne velké bankovky.<br>
+                    2.	<strong>Platba kartou:</strong> Přijímám platby přes terminál. Pokud částka přesahuje 500 Kč, budete vyzváni k zadání PINu. Platba je zcela bezpečná a vaše údaje jsou chráněny.
+                    </p>
+                </div>
+            </details>
+
+            <details>
+                <summary aria-label="Rozbalovací pole: Potřebuji zrušit masáž. Jak mám postupovat?">Potřebuji zrušit masáž. Jak mám postupovat?</summary>
+                <div class="faq-content">
+                    <p>
+                    Pokud potřebujete zrušit masáž, dejte mi prosím vědět co nejdříve, abych mohl váš termín nabídnout jinému klientovi.
+                    Stačí zavolat nebo napsat zprávu – nemusíte uvádět složité důvody. Například:<br>
+                    •	„Nestihnu přijít, omlouvám se.“<br>
+                    •	„Jsem nemocná/ý, objednám se na jindy.“
+                    </p>
+                </div>
+            </details>
+            
+            <details>
+                <summary aria-label="Rozbalovací pole: Chci jít na masáž, ale nechci se nikde registrovat. Jak to mám udělat?">Chci jít na masáž, ale nechci se nikde registrovat. Jak to mám udělat?</summary>
+                <div class="faq-content">
+                    <p>
+                    Je možné se objednat i bez registrace, ale potřebuji od vás následující údaje:<br>
+                    1.	Jméno a příjmení.<br>
+                    2.	Telefonní číslo.<br>
+                    3.	Informace o zdravotním stavu: Zda máte nějaké onemocnění nebo alergie na oleje. Používám neutrální hypoalergenní olej bez vůně, který je vhodný pro většinu klientů.
+                    </p>
+                </div>
+            </details>
+            
+            <details>
+                <summary aria-label="Rozbalovací pole: Kam si mé údaje ukládáte?">Kam si mé údaje ukládáte?</summary>
+                <div class="faq-content">
+                    <p>
+                    Pečlivě dbám na ochranu vašich údajů. Zde je přehled, jaké informace si ukládám:<br>
+                    •	<strong>Základní údaje:</strong> Jméno, příjmení, telefonní číslo.<br>
+                    •	<strong>Historie masáží:</strong> Počet a typ masáží, diagnózy, poznámky o proběhlých masážích.<br>
+                    Tyto informace jsou uloženy v soukromém excelovém souboru, ke kterému mám přístup pouze já. Vaše údaje nejsou sdíleny s třetími stranami.
+                    </p>
+                </div>
+            </details>
+            
+            <details>
+                <summary aria-label="Rozbalovací pole: Co mám dělat, když jsem nespokojená/ý s masáží?">Co mám dělat, když jsem nespokojená/ý s masáží?</summary>
+                <div class="faq-content">
+                    <p>
+                    Pokud nejste spokojeni, rozhodně se nebojte mi to sdělit. Vážím si každé zpětné vazby, ať už je pozitivní, nebo kritická. Masíruji už řadu let, ale stále se snažím zlepšovat. Pokud máte připomínku nebo návrh, co by šlo udělat jinak, neváhejte mi to říct. Budu vám za to vděčný a udělám vše pro to, abyste byli spokojeni.
+                    </p>
+                </div>
+            </details>
+        </section>
+
+    </div>
+</body>
+</html>

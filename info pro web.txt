@@ -1,0 +1,77 @@
+Úvodní slovo:
+Vítejte! Jmenuji se Jan Šimek a masáže jsou pro mě víc než práce – jsou posláním. Od roku 2012 pomáhám lidem nacházet úlevu a rovnováhu. Děkuji, že mi důvěřujete.
+
+kontakt:
+
+            Najdete mě v Mladé Boleslavi. Pokud máte jakékoli dotazy, neváhejte se mi ozvat.
+        </p>
+        <address class="mt-6 space-y-2 font-medium not-italic">
+            <p><a href="tel:+420704715817" class="text-teal-700 hover:text-teal-500 transition text-xl">+420 704 715 817</a></p>
+            <p><a href="mailto:info@masazesimek.cz" class="text-teal-700 hover:text-teal-500 transition text-xl">info@masazesimek.cz</a></p>
+            <p class="text-lg text-slate-700">Tř. Václava Klementa 820, 29301 Mladá Boleslav</p>
+        </address>
+
+Rezervace:
+
+
+    <section class="p-6 md:p-12 bg-slate-50" role="region" aria-labelledby="why-massage-heading">
+        <div class="flex flex-col md:flex-row items-center gap-8">
+            <div class="flex-shrink-0">
+                <img src="data/007._logo.jpg" alt="Logo Masáže Jan Šimek." class="w-full max-w-xs md:max-w-sm mx-auto rounded-lg shadow-md">
+            </div>
+            <div class="flex-1 text-center md:text-left">
+                <h2 id="why-massage-heading" class="text-3xl font-bold mb-4 font-serif text-slate-800">Proč si dopřát masáž?</h2>
+                <p class="text-slate-600">
+                    Masáž je jako reset pro vaše tělo i mysl. Pomáhá uvolnit svalové napětí, zmírňuje stres a přináší pocit celkové pohody. Ať už máte za sebou náročný den v práci, sportovní výkon, nebo jen potřebujete chvilku pro sebe, masáž vám pomůže načerpat novou energii a vrátit se do rovnováhy.
+                </p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="p-10 md:p-16 bg-slate-700 text-white text-center" role="region" aria-labelledby="booking-heading">
+        <h2 id="booking-heading" class="text-3xl font-bold mb-4 font-serif">Už nečekejte, objednejte se ještě dnes!</h2>
+        <p class="text-slate-200 mb-6 max-w-xl mx-auto">
+            Rezervujte si svůj termín pohodlně online. Jednoduše si vyberte datum a čas, který vám vyhovuje. Jsem tu, abych vám pomohl.
+        </p>
+        <a href="https://masaze-jan-simek.reservio.com/booking" class="inline-block px-8 py-3 bg-teal-600 text-white rounded-lg font-bold no-underline transition hover:bg-teal-700 hover:-translate-y-0.5 transform shadow-lg hover:shadow-xl" target="_blank" rel="noopener noreferrer">
+            Online rezervace
+        </a>
+    </section>
+
+ceník:
+
+            <table aria-label="Tabulka s ceníkem masáží, délkou a cenou.">
+                <thead>
+                    <tr>
+                        <th scope="col">Typ masáže</th>
+                        <th scope="col">Délka trvání</th>
+                        <th scope="col">Cena</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Klasická masáž</td><td>30 min.</td><td>300,00 Kč</td></tr>
+                    <tr><td>Klasická masáž</td><td>60 min.</td><td>600,00 Kč</td></tr>
+                    <tr><td>Klasická masáž</td><td>90 min.</td><td>900,00 Kč</td></tr>
+                    <tr><td>Klasická masáž</td><td>120 min.</td><td>1 200,00 Kč</td></tr>
+                    <tr><td>Manuální lymfodrenáž</td><td>60 min.</td><td>700,00 Kč</td></tr>
+                    <tr><td>Manuální lymfodrenáž</td><td>90 min.</td><td>1 000,00 Kč</td></tr>
+                    <tr><td>Manuální lymfodrenáž</td><td>120 min.</td><td>1 300,00 Kč</td></tr>
+                    <tr><td>Reflexní terapie</td><td>30 min.</td><td>300,00 Kč</td></tr>
+                    <tr><td>Reflexní terapie</td><td>60 min.</td><td>600,00 Kč</td></tr>
+                    <tr><td>Reflexní terapie</td><td>90 min.</td><td>800,00 Kč</td></tr>
+                    <tr><td>Reflexní terapie</td><td>120 min.</td><td>1 000,00 Kč</td></tr>
+                    <tr><td>Dornova metoda</td><td>60 min.</td><td>700,00 Kč</td></tr>
+                    <tr><td>Dornova metoda</td><td>90 min.</td><td>900,00 Kč</td></tr>
+                    <tr><td>Dornova metoda</td><td>120 min.</td><td>1 100,00 Kč</td></tr>
+                    <tr><td>Breussova metoda</td><td>30 min.</td><td>300,00 Kč</td></tr>
+                    <tr><td>Breussova metoda</td><td>60 min.</td><td>500,00 Kč</td></tr>
+                    <tr><td>Masáž pro těhotné</td><td>30 min.</td><td>400,00 Kč</td></tr>
+                    <tr><td>Masáž pro těhotné</td><td>60 min.</td><td>700,00 Kč</td></tr>
+                    <tr><td>Mobilizační metoda</td><td>60 min.</td><td>800,00 Kč</td></tr>
+                    <tr><td>Masáž lávovými kameny</td><td>30 min.</td><td>700,00 Kč</td></tr>
+                    <tr><td>Masáž lávovými kameny</td><td>60 min.</td><td>1 200,00 Kč</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
